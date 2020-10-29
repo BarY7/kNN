@@ -50,7 +50,7 @@ for k in k_range:
         if(predict_label != int(test_labels[index])):
             error = error + 1
     print("ERROR IS : {}".format(error/len(test) * 100))
-    error[k-1] = error/len(test) * 100
+    error_vector[k-1] = error/len(test) * 100
 print("####################ERROR VECTOR#######################", error_vector)
 plt.plot(k_range, error_vector)
 plt.ylabel("errors")
